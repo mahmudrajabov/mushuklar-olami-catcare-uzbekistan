@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Siren, Lightbulb, PawPrint, Sparkles, Heart } from "lucide-react";
+import { ArrowRight, Siren, Lightbulb, PawPrint, Sparkles, Heart, Send } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import { CATEGORIES, ARTICLES, IMAGES } from "@/data/content";
 import CategoryCard from "@/components/CategoryCard";
@@ -184,14 +184,32 @@ export default function Home() {
           description="Mushuklar Olami — mushuklarni sevadigan va ular haqidagi bilimlarni o‘zbek tilida bo‘lishishni maqsad qilgan insonning ta’limiy loyihasi."
         />
         <div className="mt-8 grid gap-8 md:grid-cols-[320px,1fr] items-center">
-          <figure className="overflow-hidden rounded-3xl border border-border shadow-lg">
-            <div className="aspect-square">
-              <Image src={IMAGES.authorCartoon} alt="Sayt muallifi mushukni quchoqlagan holda — illyustrasiya" className="h-full w-full object-cover" />
-            </div>
-            <figcaption className="px-4 py-3 text-center text-sm font-medium text-muted-foreground bg-card">
-              Mushuklar Olami muallifi
-            </figcaption>
-          </figure>
+          <div>
+            <figure className="overflow-hidden rounded-3xl border border-border shadow-lg">
+              <div className="aspect-square">
+                <Image src={IMAGES.authorCartoon} alt="Sayt muallifi mushukni quchoqlagan holda — illyustrasiya" className="h-full w-full object-cover" />
+              </div>
+              <figcaption className="px-4 py-3 text-center text-sm font-medium text-muted-foreground bg-card">
+                Mushuklar Olami muallifi
+              </figcaption>
+            </figure>
+            <a
+              href="https://t.me/mahmudre"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 flex flex-col sm:flex-row sm:items-center gap-4 rounded-3xl border-2 border-primary/20 bg-primary/5 p-6 hover:bg-primary/10 transition-colors"
+            >
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#229ED9] shrink-0">
+                <Send className="h-5 w-5 text-white" />
+              </span>
+              <div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  “Mushuklarning yaxshi va baxtli yashashi uchun o‘z maslahatlaringizni biz bilan almashing.”
+                </p>
+                <p className="mt-1.5 font-semibold text-primary">Telegram: @mahmudre</p>
+              </div>
+            </a>
+          </div>
           <div className="rounded-3xl border-2 border-primary/20 bg-primary/5 p-8">
             <p className="text-lg leading-relaxed text-foreground">
               Salom! Men «Mushuklar Olami» — CatCare Uzbekistan loyihasining muallifiman.
