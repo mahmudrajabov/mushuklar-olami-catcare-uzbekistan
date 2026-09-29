@@ -9,7 +9,9 @@ export const IMAGES = {
   indoor: "https://media.base44.com/images/public/6abbfbfca3e081e5b1e960e0/dec05a66d_generated_941dd533.jpg",
   outdoor: "https://media.base44.com/images/public/6abbfbfca3e081e5b1e960e0/fa1959ef9_generated_a02d7c89.jpg",
   rescue: "https://media.base44.com/images/public/6abbfbfca3e081e5b1e960e0/048df1029_generated_324766c1.jpg",
-  sleeping: "https://media.base44.com/images/public/6abbfbfca3e081e5b1e960e0/9be9dd0d5_generated_1f83de2b.jpg"
+  sleeping: "https://media.base44.com/images/public/6abbfbfca3e081e5b1e960e0/9be9dd0d5_generated_1f83de2b.jpg",
+  sleepingCartoon: "https://media.base44.com/images/public/6abbfbfca3e081e5b1e960e0/37c69d442_generated_image.png",
+  authorCartoon: "https://media.base44.com/images/public/6abbfbfca3e081e5b1e960e0/8cafa4ad1_generated_image.png"
 };
 
 export const CATEGORIES = [

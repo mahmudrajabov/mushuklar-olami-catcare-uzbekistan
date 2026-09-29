@@ -24,32 +24,40 @@ export default function Home() {
     <div>
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          <Image src={IMAGES.hero} alt="Yaqindan mushuk yuzi — donador ko‘zlar bilan" className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/55 to-navy/20" />
-        </div>
-        <div className="mx-auto max-w-7xl px-4 py-24 md:py-36">
-          <div className="max-w-2xl text-cream">
-            <span className="pill bg-primary text-primary-foreground mb-4">
-              <PawPrint className="h-3.5 w-3.5" /> CatCare Uzbekistan
-            </span>
-            <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight">
-              Mushukingiz uchun <span className="text-primary">bilimli</span> va mehribon parvarish
-            </h1>
-            <p className="mt-5 text-lg md:text-xl text-cream/85 leading-relaxed max-w-xl">
-              Mushuklar olamiga xush kelibsiz. Bu yerda siz mushukni to‘g‘ri
-              ovqatlantirish, parvarish qilish, sog‘ligini saqlash va unga
-              mas’ul tarzda g‘amxo‘rlik qilish bo‘yicha ishonchli, ta’limiy
-              ma’lumotlarni topasiz.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/faktlar" className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground hover:opacity-90 transition-opacity">
-                Boshlash <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link to="/xarajatlar" className="inline-flex items-center gap-2 rounded-full bg-cream/15 backdrop-blur px-6 py-3 font-semibold text-cream border border-cream/30 hover:bg-cream/25 transition-colors">
-                Xarajatlar kalkulyatori
-              </Link>
+        <div className="mx-auto max-w-7xl px-4 py-16 md:py-24">
+          <div className="grid gap-10 lg:grid-cols-2 items-center">
+            <div>
+              <span className="pill bg-primary text-primary-foreground mb-4">
+                <PawPrint className="h-3.5 w-3.5" /> CatCare Uzbekistan
+              </span>
+              <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight text-foreground">
+                Mushukingiz uchun <span className="text-primary">bilimli</span> va mehribon parvarish
+              </h1>
+              <p className="mt-5 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+                Mushuklar olamiga xush kelibsiz. Bu yerda siz mushukni to‘g‘ri
+                ovqatlantirish, parvarish qilish, sog‘ligini saqlash va unga
+                mas’ul tarzda g‘amxo‘rlik qilish bo‘yicha ishonchli, ta’limiy
+                ma’lumotlarni topasiz.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link to="/faktlar" className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground hover:opacity-90 transition-opacity">
+                  Boshlash <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link to="/xarajatlar" className="inline-flex items-center gap-2 rounded-full border-2 border-border bg-card px-6 py-3 font-semibold text-foreground hover:bg-secondary transition-colors">
+                  Xarajatlar kalkulyatori
+                </Link>
+              </div>
             </div>
+            <figure className="w-full max-w-xl lg:justify-self-end">
+              <div className="overflow-hidden rounded-[2rem] border-2 border-border shadow-xl">
+                <div className="aspect-[4/3]">
+                  <Image src={IMAGES.authorCartoon} alt="Sayt muallifi mushukni quchoqlab turgan illyustrasiya" className="h-full w-full object-cover" />
+                </div>
+              </div>
+              <figcaption className="mt-2 text-center text-sm text-muted-foreground">
+                Mushuklar Olami muallifi
+              </figcaption>
+            </figure>
           </div>
         </div>
         {/* organic curve divider */}
@@ -129,14 +137,14 @@ export default function Home() {
         <div className="grid gap-8 lg:grid-cols-2 items-center">
           <figure className="overflow-hidden rounded-3xl border border-border shadow-lg">
             <div className="relative aspect-[4/3]">
-              <Image src={IMAGES.sleeping} alt="Tinch uxlayotgan mushuk quyoshli xonada" className="h-full w-full object-cover" />
+              <Image src={IMAGES.sleepingCartoon} alt="Uxlayotgan mushuk — iliqlikdagi illyustrasiya" className="h-full w-full object-cover" />
             </div>
             <figcaption className="px-4 py-3 text-center text-sm font-medium text-muted-foreground bg-card">
               Tinch muhit — mushukning baxti uchun asos
             </figcaption>
           </figure>
           <div>
-            <SectionHeading eyebrow="Mushukingiz uchun maslahat" title="Kunlik g‘amxo‘rlik bo‘yicha maslahat" />
+            <SectionHeading eyebrow="Mushuklar hayoti" title="Kunlik g‘amxo‘rlik bo‘yicha maslahat" />
             <div className="mt-6 rounded-3xl border-2 border-primary/20 bg-primary/5 p-6">
               <div className="flex items-start gap-3">
                 <Lightbulb className="h-6 w-6 text-primary shrink-0 mt-0.5" />
@@ -164,6 +172,36 @@ export default function Home() {
             <Link to="/maslahatlar" className="mt-6 inline-flex items-center gap-2 font-semibold text-primary hover:gap-3 transition-all">
               Barcha foydali maslahatlar <ArrowRight className="h-4 w-4" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* MUALLIF HAQIDA */}
+      <section className="mx-auto max-w-7xl px-4 py-14">
+        <SectionHeading
+          eyebrow="Muallif haqida"
+          title="Sayt ortidagi do‘stingiz"
+          description="Mushuklar Olami — mushuklarni sevadigan va ular haqidagi bilimlarni o‘zbek tilida bo‘lishishni maqsad qilgan insonning ta’limiy loyihasi."
+        />
+        <div className="mt-8 grid gap-8 md:grid-cols-[320px,1fr] items-center">
+          <figure className="overflow-hidden rounded-3xl border border-border shadow-lg">
+            <div className="aspect-square">
+              <Image src={IMAGES.authorCartoon} alt="Sayt muallifi mushukni quchoqlagan holda — illyustrasiya" className="h-full w-full object-cover" />
+            </div>
+            <figcaption className="px-4 py-3 text-center text-sm font-medium text-muted-foreground bg-card">
+              Mushuklar Olami muallifi
+            </figcaption>
+          </figure>
+          <div className="rounded-3xl border-2 border-primary/20 bg-primary/5 p-8">
+            <p className="text-lg leading-relaxed text-foreground">
+              Salom! Men «Mushuklar Olami» — CatCare Uzbekistan loyihasining muallifiman.
+              Yillar davomida mushuklar bilan yashab, ularning parvarishi, ovqatlantirilishi
+              va sog‘ligi haqidagi tajribalarimni to‘plaganman. Bu sayt orqali o‘zbek tilida
+              ishonchli va oddiy tilda yozilgan ma’lumotlarni barcha mushuk egalari bilan
+              bo‘lishishni maqsad qilganman. Saytdagi barcha materiallar ta’limiy maqsadda
+              yozilgan — mushukingiz sog‘lig‘iga oid savollar bo‘lsa, albatta veterinarga
+              murojaat qiling.
+            </p>
           </div>
         </div>
       </section>
