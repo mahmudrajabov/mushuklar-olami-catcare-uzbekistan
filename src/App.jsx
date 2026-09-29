@@ -6,6 +6,19 @@ import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
+import Layout from '@/components/Layout';
+import Home from '@/pages/Home';
+import Faktlar from '@/pages/Faktlar';
+import Ovqatlantirish from '@/pages/Ovqatlantirish';
+import Parvarish from '@/pages/Parvarish';
+import Veterinar from '@/pages/Veterinar';
+import Xarajatlar from '@/pages/Xarajatlar';
+import UyMushugi from '@/pages/UyMushugi';
+import Xarakter from '@/pages/Xarakter';
+import PlusMinus from '@/pages/PlusMinus';
+import Huquqlar from '@/pages/Huquqlar';
+import Maslahatlar from '@/pages/Maslahatlar';
+import Bookmarks from '@/pages/Bookmarks';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -34,7 +47,20 @@ const AuthenticatedApp = () => {
   // Render the main app
   return (
     <Routes>
-      {/* Add your page Route elements here */}
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/faktlar" element={<Faktlar />} />
+        <Route path="/ovqatlantirish" element={<Ovqatlantirish />} />
+        <Route path="/parvarish" element={<Parvarish />} />
+        <Route path="/veterinar" element={<Veterinar />} />
+        <Route path="/xarajatlar" element={<Xarajatlar />} />
+        <Route path="/uy-mushugi" element={<UyMushugi />} />
+        <Route path="/xarakter" element={<Xarakter />} />
+        <Route path="/plus-minus" element={<PlusMinus />} />
+        <Route path="/huquqlar" element={<Huquqlar />} />
+        <Route path="/maslahatlar" element={<Maslahatlar />} />
+        <Route path="/saqlanganlar" element={<Bookmarks />} />
+      </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
