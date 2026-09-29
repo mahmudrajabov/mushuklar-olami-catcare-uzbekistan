@@ -54,9 +54,22 @@ export default function Home() {
                   <Image src={IMAGES.authorCartoon} alt="Sayt muallifi mushukni quchoqlab turgan illyustrasiya" className="h-full w-full object-cover" />
                 </div>
               </div>
-              <figcaption className="mt-2 text-center text-sm text-muted-foreground">
-                Mushuklar Olami muallifi
-              </figcaption>
+              <a
+                href="https://t.me/mahmudre"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 flex flex-col sm:flex-row sm:items-center gap-4 rounded-3xl border-2 border-primary/20 bg-primary/5 p-6 hover:bg-primary/10 transition-colors"
+              >
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#229ED9] shrink-0">
+                  <Send className="h-5 w-5 text-white" />
+                </span>
+                <span>
+                  <span className="block text-sm text-muted-foreground leading-relaxed">
+                    “Mushuklarning yaxshi va baxtli yashashi uchun o‘z maslahatlaringizni biz bilan almashing.”
+                  </span>
+                  <span className="mt-1.5 block font-semibold text-primary">Telegram: @mahmudre</span>
+                </span>
+              </a>
             </figure>
           </div>
         </div>
@@ -185,24 +198,8 @@ export default function Home() {
         />
         <div className="mt-8 grid gap-8 md:grid-cols-[320px,1fr] items-center">
           <figure className="overflow-hidden rounded-3xl border border-border shadow-lg">
-            <div className="relative aspect-square">
+            <div className="aspect-square">
               <Image src={IMAGES.authorCartoon} alt="Sayt muallifi mushukni quchoqlagan holda — illyustrasiya" className="h-full w-full object-cover" />
-              <a
-                href="https://t.me/mahmudre"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute inset-x-0 bottom-0 flex items-center gap-3 bg-navy/80 px-4 py-3 backdrop-blur-sm hover:bg-navy/90 transition-colors"
-              >
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#229ED9] shrink-0">
-                  <Send className="h-4 w-4 text-white" />
-                </span>
-                <span className="min-w-0">
-                  <span className="block text-sm font-semibold text-white">Telegram: @mahmudre</span>
-                  <span className="mt-0.5 block text-xs text-white/75 leading-snug">
-                    “Mushuklarning yaxshi va baxtli yashashi uchun o‘z maslahatlaringizni biz bilan almashing.”
-                  </span>
-                </span>
-              </a>
             </div>
             <figcaption className="px-4 py-3 text-center text-sm font-medium text-muted-foreground bg-card">
               Mushuklar Olami muallifi
