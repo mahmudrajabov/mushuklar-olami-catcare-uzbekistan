@@ -56,13 +56,15 @@ export default function Navbar() {
             }`}
           >
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 shrink-0">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                <PawPrint className="h-5 w-5" />
-              </span>
-              <span className="hidden sm:block font-heading font-bold text-foreground leading-tight">
-                Mushuklar Olami
-                <span className="block text-[10px] font-medium text-muted-foreground">CatCare Uzbekistan</span>
+            <Link to="/" aria-label="Mahmud Rajabov — bosh sahifa" className="flex items-center gap-2.5 shrink-0">
+              <img
+                src="/m-cat-emblem.svg"
+                alt="Mahmud Rajabov — mushuk emblemasi"
+                className="h-7 w-7 sm:h-8 sm:w-8 shrink-0"
+              />
+              <span className="font-heading font-bold text-foreground leading-tight">
+                Mahmud Rajabov
+                <span className="hidden sm:block text-[10px] font-medium text-muted-foreground">CatCare Uzbekistan</span>
               </span>
             </Link>
 

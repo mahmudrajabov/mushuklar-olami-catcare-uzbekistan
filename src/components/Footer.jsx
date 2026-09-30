@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { PawPrint, AlertTriangle, ExternalLink } from "lucide-react";
+import { AlertTriangle, ExternalLink } from "lucide-react";
 import { CATEGORIES } from "@/data/content";
 
 export default function Footer() {
@@ -9,12 +9,14 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-14">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                <PawPrint className="h-5 w-5" />
-              </span>
+            <Link to="/" aria-label="Mahmud Rajabov — bosh sahifa" className="inline-flex items-center gap-2.5 mb-4">
+              <img
+                src="/m-cat-emblem.svg"
+                alt="Mahmud Rajabov — mushuk emblemasi"
+                className="h-7 w-7 shrink-0"
+              />
               <span className="font-heading font-bold text-lg">Mushuklar Olami</span>
-            </div>
+            </Link>
             <p className="text-sm leading-relaxed text-cream/70 max-w-md">
               O‘zbekistonda mushuklar bilan mas’ul tarzda g‘amxo‘rlik qilishni
               rag‘batlantiruvchi ta’limiy platforma. Bizning maqsadimiz —
